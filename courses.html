@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses | AARA Computers</title>
+  <meta name="description" content="Explore our industry-recognized IT courses including Office Automation, Digital Marketing, Python, Web Development, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Page Header */
+    .page-header {
+      background: linear-gradient(135deg, #0B1B35 0%, #132a50 100%);
+      padding: 160px 0 80px;
+      text-align: center;
+      color: #fff;
+    }
+    .page-header h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .page-header p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.7);
+    }
+    
+    /* Course Pathway */
+    .pathway-section { padding: 60px 0; background: #fff; border-bottom: 1px solid #E8EAED; }
+    .pathway-wrap { display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: 0 auto; position: relative; }
+    .pathway-line { position: absolute; top: 32px; left: 10%; right: 10%; height: 2px; background: #E8EAED; z-index: 1; }
+    .pathway-step { position: relative; z-index: 2; text-align: center; background: #fff; padding: 0 1rem; }
+    .pathway-icon { width: 64px; height: 64px; background: #EAF3FF; border: 2px solid #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #0F6FFF; margin: 0 auto 1rem; box-shadow: 0 4px 10px rgba(15,111,255,0.1); }
+    .pathway-step h4 { font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 700; color: #0B1B35; }
+    
+    /* Courses Grid */
+    .courses-section { padding: 100px 0; background: #F7F8FA; }
+    
+    /* Certification Info */
+    .cert-section { padding: 100px 0; background: #EAF3FF; }
+    .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .cert-image { border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(15,111,255,0.15); }
+    .cert-image img { width: 100%; display: block; }
+    
+    @media (max-width: 768px) {
+      .pathway-wrap { flex-direction: column; gap: 2rem; }
+      .pathway-line { display: none; }
+      .cert-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Sticky Top Bar -->
+  <div class="sticky-top-bar">
+    <a href="tel:+919952065544">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      99520 65544
+    </a>
+    <a href="https://wa.me/919952065544" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+    <a href="https://www.instagram.com/aaracomputers" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      Instagram
+    </a>
+    <a href="mailto:aaracomputers@gmail.com">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      aaracomputers@gmail.com
+    </a>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo-wrap">
+      <img src="company logo.png" alt="AARA Computers Logo" />
+      <div class="logo-text">
+        <span class="logo-name">AARA Computers</span>
+        <span class="logo-tag">Est. 2012 · Vadapalani, Chennai</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="courses.html" class="active">Courses</a>
+      <a href="services.html">IT Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="tel:+919952065544" class="btn-nav-phone">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        99520 65544
+      </a>
+      <a href="contact.html" class="btn btn-primary" style="padding:10px 20px;font-size:0.85rem;">Enroll Now</a>
+    </div>
+    <div class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay" id="nav-overlay"></div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <div class="close-btn" id="nav-close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </div>
+    <img src="company logo.png" alt="AARA Computers" style="height:44px;margin-bottom:1.5rem;" />
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="courses.html" class="active">Courses</a></li>
+      <li><a href="services.html">IT Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="margin-top:2rem;display:flex;flex-direction:column;gap:10px;">
+      <a href="tel:+919952065544" class="btn btn-outline" style="justify-content:center;">📞 Call Now</a>
+      <a href="https://wa.me/919952065544" class="btn btn-whatsapp" style="justify-content:center;">💬 WhatsApp</a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container reveal">
+      <h1>Our Courses</h1>
+      <p>Practical Skills for Real Careers</p>
+    </div>
+  </header>
+
+  <!-- Course Pathway Visualization -->
+  <section class="pathway-section">
+    <div class="container reveal">
+      <div class="pathway-wrap">
+        <div class="pathway-line"></div>
+        <div class="pathway-step">
+          <div class="pathway-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <h4>Foundation</h4>
+        </div>
+        <div class="pathway-step">
+          <div class="pathway-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <h4>Skill Building</h4>
+        </div>
+        <div class="pathway-step">
+          <div class="pathway-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <h4>Certification</h4>
+        </div>
+        <div class="pathway-step">
+          <div class="pathway-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <h4>Career</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Grid -->
+  <section class="courses-section">
+    <div class="container">
+      <div class="section-header center reveal">
+        <h2 class="section-title">Explore Our 11 Core Courses</h2>
+        <p class="section-subtitle">Comprehensive training programs designed by industry experts.</p>
+      </div>
+      <div class="grid-3">
+        <!-- Course 1 -->
+        <div class="course-card reveal" data-delay="0">
+          <div class="course-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <h3>Office Automation (CCA)</h3>
+          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">Master MS Office, Excel, Word, PowerPoint for productive office work.</p>
+          <div class="course-meta">
+            <span class="badge badge-blue">⏱ 2 Months</span>
+            <span class="badge badge-green">✓ Certificate Available</span>
+          </div>
+          <a href="contact.html?course=Office Automation (CCA)" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
+        </div>
+        <!-- Course 2 -->
+        <div class="course-card reveal" data-delay="100">
+          <div class="course-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="10" x2="16" y2="10"/><line x1="12" y1="10" x2="12" y2="10"/><line x1="8" y1="10" x2="8" y2="10"/><line x1="16" y1="14" x2="16" y2="14"/><line x1="12" y1="14" x2="12" y2="14"/><line x1="8" y1="14" x2="8" y2="14"/><line x1="16" y1="18" x2="16" y2="18"/><line x1="12" y1="18" x2="12" y2="18"/><line x1="8" y1="18" x2="8" y2="18"/></svg></div>
+          <h3>Tally Prime with GST</h3>
+          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">Learn GST billing, accounts, and inventory with Tally Prime.</p>
+          <div class="course-meta">
+            <span class="badge badge-blue">⏱ 2 Months</span>
+            <span class="badge badge-green">✓ Certificate Available</span>
+          </div>
+          <a href="contact.html?course=Tally Prime with GST" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
+        </div>
+        <!-- Course 3 -->
+        <div class="course-card reveal" data-delay="200">
+          <div class="course-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
+          <h3>Designing with Printing Tech</h3>
+          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">Photoshop, CorelDraw, printing design, and DTP essentials.</p>
+          <div class="course-meta">
+            <span class="badge badge-blue">⏱ 3 Months</span>
+            <span class="badge badge-green">✓ Certificate Available</span>
+          </div>
+          <a href="contact.html?course=Designing with Printing Technologies" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
+        </div>
+        <!-- Course 4 -->
+        <div class="course-card reveal" data-delay="0">
+          <div class="course-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+          <h3>Digital Marketing</h3>
+          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">SEO, Social Media Marketing, Google Ads, Content Strategy.</p>
+          <div class="course-meta">
+            <span class="badge badge-blue">⏱ 2 Months</span>
+            <span class="badge badge-green">✓ Certificate Available</span>
+          </div>
+          <a href="contact.html?course=Digital Marketing" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
+        </div>
+        <!-- Course 5 -->
+        <div class="course-card reveal" data-delay="100">
+          <div class="course-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <h3>Web Development</h3>
+          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">HTML, CSS, JavaScript — build responsive modern websites.</p>
+          <div class="course-meta">
+            <span class="badge badge-blue">⏱ 2 Months</span>
+            <span class="badge badge-green">✓ Certificate Available</span>
+          </div>
+          <a href="contact.html?course=Web Development" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
+        </div>
+        <!-- Course 6 -->
+        <div class="course-card reveal" data-delay="200">
+          <div class="course-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div>
+          <h3>C Programming</h3>
+          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">Fundamentals of C, logic building, and core programming concepts.</p>
+          <div class="course-meta">
+            <span class="badge badge-blue">⏱ 2 Months</span>
+            <span class="badge badge-green">✓ Certificate Available</span>
+          </div>
+          <a href="contact.html?course=C Programming" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
+        </div>
+        <!-- Course 7 -->
+        <div class="course-card reveal" data-delay="0">
+          <div class="course-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div>
+          <h3>C++ Programming</h3>
+          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">OOP concepts, classes, inheritance, and advanced programming.</p>
+          <div class="course-meta">
+            <span class="badge badge-blue">⏱ 2 Months</span>
+            <span class="badge badge-green">✓ Certificate Available</span>
+          </div>
+          <a href="contact.html?course=C++" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
+        </div>
+        <!-- Course 8 -->
+        <div class="course-card reveal" data-delay="100">
+          <div class="course-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+          <h3>Java Programming</h3>
+          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">Core Java, OOP principles, and application development.</p>
+          <div class="course-meta">
+            <span class="badge badge-blue">⏱ 2 Months</span>
+            <span class="badge badge-green">✓ Certificate Available</span>
+          </div>
+          <a href="contact.html?course=Java" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
+        </div>
+        <!-- Course 9 -->
+        <div class="course-card reveal" data-delay="200">
+          <div class="course-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <h3>Python Programming</h3>
+          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">Python basics, scripting, automation, and project building.</p>
+          <div class="course-meta">
+            <span class="badge badge-blue">⏱ 2 Months</span>
+            <span class="badge badge-green">✓ Certificate Available</span>
+          </div>
+          <a href="contact.html?course=Python" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
+        </div>
+         <!-- Course 10 -->
+        <div class="course-card reveal" data-delay="0">
+          <div class="course-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <h3>CCTV Camera Installation</h3>
+          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">IP cameras, DVR/NVR systems, cabling, and surveillance setup.</p>
+          <div class="course-meta">
+            <span class="badge badge-orange">⏱ 1 Month</span>
+            <span class="badge badge-green">✓ Certificate Available</span>
+          </div>
+          <a href="contact.html?course=CCTV Camera Installation & Training" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
+        </div>
+        <!-- Course 11 -->
+        <div class="course-card reveal" data-delay="100">
+          <div class="course-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6" y2="6"/><line x1="6" y1="18" x2="6" y2="18"/></svg></div>
+          <h3>Computer Hardware & Networking</h3>
+          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">PC assembly, troubleshooting, LAN/WAN setup, and maintenance.</p>
+          <div class="course-meta">
+            <span class="badge badge-orange">⏱ 1 Month</span>
+            <span class="badge badge-green">✓ Certificate Available</span>
+          </div>
+          <a href="contact.html?course=Computer Hardware & Networking" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certification Info -->
+  <section class="cert-section">
+    <div class="container">
+      <div class="cert-grid">
+        <div class="reveal-left">
+          <div class="cert-image img-hover">
+            <img src="students getting certificate after corse completion.JPG" alt="Students receiving certificates" />
+          </div>
+        </div>
+        <div class="reveal-right">
+          <span class="section-label">Certification</span>
+          <h2 class="section-title">Industry Recognized Certification</h2>
+          <p class="section-subtitle" style="margin-bottom: 2rem;">
+            AARA Computers is committed to providing education that adds real value to your career. All students receive an official completion certificate after successfully finishing their course.
+          </p>
+          <div class="achievement-list">
+            <div class="achievement-item">
+              <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Validates your practical skills to employers
+            </div>
+             <div class="achievement-item">
+              <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Recognized by companies across the IT industry
+            </div>
+            <div class="achievement-item">
+              <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Signed by our Microsoft Certified Trainer
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Enroll CTA -->
+  <section class="section section-blue" style="text-align: center; background: linear-gradient(135deg, #0F6FFF 0%, #0a56cc 100%);">
+      <div class="container reveal">
+          <h2 style="font-family: 'Outfit', sans-serif; font-size: 2.5rem; color: #fff; margin-bottom: 1rem;">Start Your Journey Today</h2>
+          <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem;">Join AARA Computers and gain the skills you need to succeed.</p>
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+             <a href="https://wa.me/919952065544" class="btn btn-white">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp Us
+             </a>
+             <a href="tel:+919952065544" class="btn btn-outline" style="color: #fff; border-color: rgba(255,255,255,0.3);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                Call Now
+             </a>
+          </div>
+      </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="company logo.png" alt="AARA Computers" />
+          <p>Premier computer training academy and IT services company in Vadapalani, Chennai. Building careers and powering businesses since 2012.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/aaracomputers" target="_blank" title="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://wa.me/919952065544" target="_blank" title="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="tel:+919952065544" title="Call Us">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="courses.html">Our Courses</a></li>
+            <li><a href="services.html">IT Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Popular Courses</h4>
+          <ul>
+            <li><a href="courses.html">Office Automation (CCA)</a></li>
+            <li><a href="courses.html">Tally Prime with GST</a></li>
+            <li><a href="courses.html">Digital Marketing</a></li>
+            <li><a href="courses.html">Web Development</a></li>
+            <li><a href="courses.html">Python Programming</a></li>
+            <li><a href="courses.html">CCTV Installation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>No.34/108, Gangai Amman Koil Street, Vadapalani, Chennai – 600026</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <span><a href="tel:+919952065544" style="color:inherit;">99520 65544</a> / <a href="tel:+919445435755" style="color:inherit;">94454 35755</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:aaracomputers@gmail.com" style="color:inherit;">aaracomputers@gmail.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Mon–Sat: 9:00 AM – 9:00 PM<br/>Sunday: Closed</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 AARA Computers. All rights reserved. | Vadapalani, Chennai</span>
+        <span>Microsoft Certified Trainer &amp; Systems Engineer</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating FAB -->
+  <div class="fab-container">
+    <a href="https://wa.me/919952065544" class="fab-btn whatsapp" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+    <a href="tel:+919952065544" class="fab-btn call">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call Now
+    </a>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
