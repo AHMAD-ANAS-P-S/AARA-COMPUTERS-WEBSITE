@@ -369,6 +369,7 @@
     .cred-bar-role { font-size:0.78rem; color:#6B7280; }
     .cred-divider { width:1px; height:40px; background:#E8EAED; flex-shrink:0; }
     .cred-badges-row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+    .feature-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.25rem; }
 
     @media(max-width: 992px) {
       .hero-content { grid-template-columns: 1fr; text-align: center; }
@@ -382,6 +383,7 @@
       .gallery-preview-grid { grid-template-columns: 1fr; }
       .credential-bar { flex-direction: column; align-items: center; text-align: center; }
       .cred-badges-row { justify-content: center; }
+      .feature-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -723,7 +725,7 @@
         <h2 class="section-title">Why Choose AARA Computers?</h2>
         <p class="section-subtitle">Everything you need for a successful career in technology — under one roof.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1.25rem;">
+      <div class="feature-grid">
         <div class="feature-card reveal" data-delay="0">
           <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
           <h4>12+ Years Experience</h4>

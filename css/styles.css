@@ -40,15 +40,22 @@
 
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
   font-family: var(--font-body);
   color: var(--text-dark);
   background: var(--white);
-  overflow-x: hidden;
   cursor: none;
 }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
+.card, .course-card, .service-card, .stat-item, .gallery-item {
+  width: 100%; max-width: 100%; box-sizing: border-box;
+}
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 button { cursor: none; border: none; background: none; font-family: inherit; }
@@ -376,7 +383,8 @@ button { cursor: none; border: none; background: none; font-family: inherit; }
 /* ── Grid Layouts ── */
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.feature-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.25rem; }
 
 /* ── Floating WhatsApp / Call CTA ── */
 .fab-container {
@@ -1267,7 +1275,7 @@ footer {
   .hero-content { margin-left: 5%; }
 }
 @media (max-width: 1024px) {
-  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-4, .grid-3, .feature-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .stat-item:nth-child(2) { border-right: none; }
@@ -1293,23 +1301,19 @@ footer {
   .hamburger { display: flex; }
   .section { padding: 60px 0; }
   
-  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .grid-4, .grid-2, .grid-3, .feature-grid { grid-template-columns: 1fr; }
   
   /* Hero */
   .hero-title { font-size: 2.2rem; }
   .hero-subtitle { font-size: 1rem; padding-right: 0; }
   .hero-buttons { flex-direction: column; width: 100%; gap: 1rem; }
-  .hero-buttons .btn { width: 100%; text-align: center; justify-content: center; }
+  .hero-buttons .btn { width: 100%; max-width: 100%; text-align: center; justify-content: center; white-space: normal; }
   
   /* Founder Spotlight */
-  .founder-image-wrap { width: 280px; height: 280px; margin: 0 auto; }
-  .founder-orbit-1 { width: 250px; height: 250px; }
-  .founder-orbit-2 { width: 280px; height: 280px; }
-  .founder-photo-frame { width: 200px; height: 200px; }
   .cert-badges { justify-content: center; flex-wrap: wrap; }
   
   /* Stats */
-  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .stats-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   
   /* Gallery */
   .gallery-masonry { columns: 1; }
@@ -1324,8 +1328,8 @@ footer {
   .social-links { justify-content: center; }
   
   /* Floating Buttons */
-  .fab-container { bottom: 1rem; right: 1rem; }
-  .fab-btn { padding: 10px 14px; font-size: 0.75rem; }
+  .fab-container { bottom: 1rem; right: 1rem; transform: scale(0.85); transform-origin: bottom right; gap: 0.5rem; }
+  .fab-btn { padding: 10px 14px; font-size: 0.75rem; white-space: normal; }
   #back-to-top { bottom: 1rem; left: 1rem; right: auto; transform: translateY(100px); }
   #back-to-top.visible { transform: translateY(0); }
   
