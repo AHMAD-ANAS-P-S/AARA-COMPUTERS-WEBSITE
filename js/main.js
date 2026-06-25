@@ -112,6 +112,11 @@ hamburger?.addEventListener('click', openMobileNav);
 closeBtn?.addEventListener('click', closeMobileNav);
 overlay?.addEventListener('click', closeMobileNav);
 
+// Close menu when a link is clicked
+document.querySelectorAll('.mobile-nav a').forEach(link => {
+  link.addEventListener('click', closeMobileNav);
+});
+
 // ── Scroll Reveal ─────────────────────────────────────────────
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
@@ -347,6 +352,20 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     panning = false;
     lbImg.style.cursor = 'grab';
   };
+
+  // Touch swipe support for mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+  lbContainer.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, {passive: true});
+  lbContainer.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    if (scale === 1) { // Only swipe if not zoomed in
+      if (touchEndX < touchStartX - 50) document.getElementById('lb-next').click();
+      if (touchEndX > touchStartX + 50) document.getElementById('lb-prev').click();
+    }
+  }, {passive: true});
 
   lbContainer.onclick = (e) => {
     if(e.target === lbContainer) closeLightbox();

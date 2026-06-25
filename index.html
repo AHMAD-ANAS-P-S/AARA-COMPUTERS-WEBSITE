@@ -370,14 +370,18 @@
     .cred-divider { width:1px; height:40px; background:#E8EAED; flex-shrink:0; }
     .cred-badges-row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
 
-    @media(max-width:768px) {
-      .hero-content { grid-template-columns:1fr; }
-      .hero-left { margin-left: 0; }
-      .hero-right { display:none; }
-      .intro-grid, .success-grid, .award-grid { grid-template-columns:1fr; }
-      .gallery-preview-grid { grid-template-columns: repeat(2,1fr); }
-      .credential-bar { flex-direction:column; align-items:flex-start; }
-      .cred-divider { width:100%; height:1px; }
+    @media(max-width: 992px) {
+      .hero-content { grid-template-columns: 1fr; text-align: center; }
+      .hero-left { margin-left: 0; padding-right: 0; }
+      .hero-right { display: none; }
+      .intro-grid, .success-grid, .award-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .credential-bar { flex-wrap: wrap; justify-content: center; }
+      .cred-divider { display: none; }
+    }
+    @media(max-width: 768px) {
+      .gallery-preview-grid { grid-template-columns: 1fr; }
+      .credential-bar { flex-direction: column; align-items: center; text-align: center; }
+      .cred-badges-row { justify-content: center; }
     }
   </style>
 </head>
@@ -409,7 +413,7 @@
   <!-- Navbar -->
   <nav class="navbar">
     <a href="index.html" class="logo-wrap">
-      <img src="company logo.png" alt="AARA Computers Logo" />
+      <img loading="lazy" decoding="async" src="company logo.png" alt="AARA Computers Logo" />
       <div class="logo-text">
         <span class="logo-name">AARA Computers</span>
         <span class="logo-tag">Est. 2012 · Vadapalani, Chennai</span>
@@ -441,7 +445,7 @@
     <div class="close-btn" id="nav-close">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </div>
-    <img src="company logo.png" alt="AARA Computers" style="height:44px;margin-bottom:1.5rem;" />
+    <img loading="lazy" decoding="async" src="company logo.png" alt="AARA Computers" style="height:44px;margin-bottom:1.5rem;" />
     <ul>
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About Us</a></li>
@@ -467,7 +471,7 @@
         <!-- Left -->
         <div class="hero-left">
           <div class="hero-logo-row">
-            <img src="company logo.png" alt="AARA Computers" />
+            <img loading="lazy" decoding="async" src="company logo.png" alt="AARA Computers" />
             <div class="hero-logo-text">
               <span class="hero-logo-name">AARA Computers</span>
               <span class="hero-logo-tagline">Vadapalani, Chennai</span>
@@ -564,7 +568,7 @@
           <div class="credential-bar">
             <div class="cred-bar-founder">
               <div class="cred-bar-photo">
-                <img src="Founder Photo1.JPG" alt="S. Mohideen Meeran" />
+                <img loading="lazy" decoding="async" src="Founder Photo1.JPG" alt="S. Mohideen Meeran" />
               </div>
               <div>
                 <div class="cred-bar-name">S. Mohideen Meeran</div>
@@ -607,7 +611,7 @@
         </div>
         <div class="reveal-right">
           <div class="intro-image-wrap zoomable-photo-card">
-            <img src="company poster.jpg" alt="AARA Computers Academy" />
+            <img loading="lazy" decoding="async" src="company poster.jpg" alt="AARA Computers Academy" />
             <div class="zoomable-photo-overlay">
               <span class="view-larger-btn">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -699,7 +703,7 @@
             <div class="founder-orbit founder-orbit-2"><div class="orbit-dot orbit-dot-2"></div></div>
             <div class="founder-glow"></div>
             <div class="founder-photo-frame">
-              <img src="Founder Photo1.JPG" alt="S. Mohideen Meeran – Founder AARA Computers" />
+              <img loading="lazy" decoding="async" src="Founder Photo1.JPG" alt="S. Mohideen Meeran – Founder AARA Computers" />
             </div>
             <div class="founder-badge-float b1">🎓 MCT Certified</div>
             <div class="founder-badge-float b2">🏆 1500+ Students</div>
@@ -858,7 +862,7 @@
         <div class="reveal-left">
           <div class="success-imgs">
             <div class="success-img-main zoomable-photo-card">
-              <img src="students getting certificate after corse completion.JPG" alt="Students receiving certificates at AARA Computers" />
+              <img loading="lazy" decoding="async" src="students getting certificate after corse completion.JPG" alt="Students receiving certificates at AARA Computers" />
               <div class="zoomable-photo-overlay">
                 <span class="view-larger-btn">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -867,7 +871,7 @@
               </div>
             </div>
             <div class="success-img-half zoomable-photo-card">
-              <img src="students photo doing their work in company.jpg" alt="Students training at AARA Computers" />
+              <img loading="lazy" decoding="async" src="students photo doing their work in company.jpg" alt="Students training at AARA Computers" />
               <div class="zoomable-photo-overlay">
                 <span class="view-larger-btn">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -928,7 +932,7 @@
       <div class="award-grid">
         <div class="award-card reveal" data-delay="0">
           <div class="img-hover zoomable-photo-card">
-            <img class="award-img" src="founder getting best teacher award.JPG" alt="Best Teaching Award" style="height:240px;object-fit:cover;width:100%;" />
+            <img loading="lazy" decoding="async" class="award-img" src="founder getting best teacher award.JPG" alt="Best Teaching Award" style="height:240px;object-fit:cover;width:100%;" />
             <div class="zoomable-photo-overlay">
               <span class="view-larger-btn">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -957,7 +961,7 @@
         </div>
         <div class="award-card reveal" data-delay="300">
           <div class="img-hover zoomable-photo-card">
-            <img class="award-img" src="Founder photo with some vip.JPG" alt="Founder with VIP Guest" style="height:240px;object-fit:cover;width:100%;object-position:top;" />
+            <img loading="lazy" decoding="async" class="award-img" src="Founder photo with some vip.JPG" alt="Founder with VIP Guest" style="height:240px;object-fit:cover;width:100%;object-position:top;" />
             <div class="zoomable-photo-overlay">
               <span class="view-larger-btn">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1065,7 +1069,7 @@
       </div>
       <div class="gallery-preview-grid">
         <div class="gp-item reveal zoomable-photo-card">
-          <img src="students getting certificate after corse completion.JPG" alt="Certificate Distribution" />
+          <img loading="lazy" decoding="async" src="students getting certificate after corse completion.JPG" alt="Certificate Distribution" />
           <div class="zoomable-photo-overlay" style="flex-direction:column;gap:12px;">
             <span class="view-larger-btn">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1075,7 +1079,7 @@
           </div>
         </div>
         <div class="gp-item reveal zoomable-photo-card">
-          <img src="founder getting best teacher award.JPG" alt="Best Teaching Award" />
+          <img loading="lazy" decoding="async" src="founder getting best teacher award.JPG" alt="Best Teaching Award" />
           <div class="zoomable-photo-overlay" style="flex-direction:column;gap:12px;">
             <span class="view-larger-btn">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1085,7 +1089,7 @@
           </div>
         </div>
         <div class="gp-item reveal zoomable-photo-card">
-          <img src="students photo doing their work in company.jpg" alt="Students Training" />
+          <img loading="lazy" decoding="async" src="students photo doing their work in company.jpg" alt="Students Training" />
           <div class="zoomable-photo-overlay" style="flex-direction:column;gap:12px;">
             <span class="view-larger-btn">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1095,7 +1099,7 @@
           </div>
         </div>
         <div class="gp-item reveal zoomable-photo-card">
-          <img src="Founder photo with some vip.JPG" alt="Founder with VIP" style="object-position:top;" />
+          <img loading="lazy" decoding="async" src="Founder photo with some vip.JPG" alt="Founder with VIP" style="object-position:top;" />
           <div class="zoomable-photo-overlay" style="flex-direction:column;gap:12px;">
             <span class="view-larger-btn">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1105,7 +1109,7 @@
           </div>
         </div>
         <div class="gp-item reveal zoomable-photo-card">
-          <img src="founder photo2.JPG" alt="Founder at Academy" style="object-position:top;" />
+          <img loading="lazy" decoding="async" src="founder photo2.JPG" alt="Founder at Academy" style="object-position:top;" />
           <div class="zoomable-photo-overlay" style="flex-direction:column;gap:12px;">
             <span class="view-larger-btn">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1115,7 +1119,7 @@
           </div>
         </div>
         <div class="gp-item reveal zoomable-photo-card">
-          <img src="company poster.jpg" alt="AARA Computers" />
+          <img loading="lazy" decoding="async" src="company poster.jpg" alt="AARA Computers" />
           <div class="zoomable-photo-overlay" style="flex-direction:column;gap:12px;">
             <span class="view-larger-btn">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1125,7 +1129,7 @@
           </div>
         </div>
         <div class="gp-item reveal zoomable-photo-card">
-          <img src="founder photo3.JPG" alt="Founder Teaching" style="object-position:top;" />
+          <img loading="lazy" decoding="async" src="founder photo3.JPG" alt="Founder Teaching" style="object-position:top;" />
           <div class="zoomable-photo-overlay" style="flex-direction:column;gap:12px;">
             <span class="view-larger-btn">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1135,7 +1139,7 @@
           </div>
         </div>
         <div class="gp-item reveal zoomable-photo-card">
-          <img src="founder photo 4.JPG" alt="Founder Profile" style="object-position:top;" />
+          <img loading="lazy" decoding="async" src="founder photo 4.JPG" alt="Founder Profile" style="object-position:top;" />
           <div class="zoomable-photo-overlay" style="flex-direction:column;gap:12px;">
             <span class="view-larger-btn">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -1185,7 +1189,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="company logo.png" alt="AARA Computers" />
+          <img loading="lazy" decoding="async" src="company logo.png" alt="AARA Computers" />
           <p>Premier computer training academy and IT services company in Vadapalani, Chennai. Building careers and powering businesses since 2012.</p>
           <div class="footer-social">
             <a href="https://www.instagram.com/aaracomputers" target="_blank" title="Instagram">

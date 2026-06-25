@@ -1261,35 +1261,89 @@ footer {
 }
 
 /* ── Responsive ── */
+/* ── Responsive ── */
+/* Laptop (1024px – 1919px) */
+@media (max-width: 1400px) {
+  .hero-content { margin-left: 5%; }
+}
 @media (max-width: 1024px) {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .stat-item:nth-child(2) { border-right: none; }
   .gallery-masonry { columns: 2; }
+  .course-card, .service-card { font-size: 0.95rem; }
 }
+
+/* Tablet (768px – 1023px) */
+@media (max-width: 992px) {
+  .founder-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .founder-orbits { margin: 0 auto; transform: scale(0.9); }
+  .founder-content { text-align: center; }
+  .hero-title { font-size: 3rem; }
+  .section { padding: 80px 0; }
+}
+
+/* Mobile (320px – 767px) */
 @media (max-width: 768px) {
   :root { --nav-h: 64px; }
   .sticky-top-bar { display: none; }
   .navbar { top: 0; }
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
-  .section { padding: 70px 0; }
+  .section { padding: 60px 0; }
+  
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
-  .founder-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .founder-image-wrap { width: 280px; height: 280px; }
+  
+  /* Hero */
+  .hero-title { font-size: 2.2rem; }
+  .hero-subtitle { font-size: 1rem; padding-right: 0; }
+  .hero-buttons { flex-direction: column; width: 100%; gap: 1rem; }
+  .hero-buttons .btn { width: 100%; text-align: center; justify-content: center; }
+  
+  /* Founder Spotlight */
+  .founder-image-wrap { width: 280px; height: 280px; margin: 0 auto; }
   .founder-orbit-1 { width: 250px; height: 250px; }
   .founder-orbit-2 { width: 280px; height: 280px; }
   .founder-photo-frame { width: 200px; height: 200px; }
+  .cert-badges { justify-content: center; flex-wrap: wrap; }
+  
+  /* Stats */
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  
+  /* Gallery */
   .gallery-masonry { columns: 1; }
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-grid { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
-  .fab-container { bottom: 1.5rem; right: 1.5rem; }
-  .fab-btn { padding: 10px 16px; font-size: 0.8rem; }
+  
+  /* Student Success */
+  .testimonial-card { padding: 1.5rem; }
+  
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr; text-align: center; }
+  .footer-links li a { justify-content: center; }
+  .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+  .social-links { justify-content: center; }
+  
+  /* Floating Buttons */
+  .fab-container { bottom: 1rem; right: 1rem; }
+  .fab-btn { padding: 10px 14px; font-size: 0.75rem; }
+  #back-to-top { bottom: 1rem; left: 1rem; right: auto; transform: translateY(100px); }
+  #back-to-top.visible { transform: translateY(0); }
+  
+  /* Contact Map */
+  .map-container { height: 300px; }
+  .contact-info-card { padding: 1.5rem; }
+  
+  /* Cursor off on mobile */
   #cursor-dot, #cursor-ring { display: none; }
   body { cursor: auto; }
   button, a { cursor: pointer; }
+}
+
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  .stat-item { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; }
+  .stat-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .hero-content { margin-top: 40px; }
 }
 
 /* ── Zoomable Photo Cards (Global Lightbox Trigger) ── */
