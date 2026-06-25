@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | AARA Computers</title>
+  <meta name="description" content="Learn about AARA Computers, a trusted academy and IT service provider in Chennai since 2012." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Page Header */
+    .page-header {
+      background: linear-gradient(135deg, #0B1B35 0%, #132a50 100%);
+      padding: 160px 0 80px;
+      text-align: center;
+      color: #fff;
+    }
+    .page-header h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .page-header p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.7);
+    }
+    
+    /* Company Story */
+    .story-section { padding: 100px 0; }
+    .story-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; }
+    .story-content h2 { font-family: 'Outfit', sans-serif; font-size: 2.2rem; color: #0B1B35; margin-bottom: 1.5rem; }
+    .story-content p { color: #6B7280; line-height: 1.8; margin-bottom: 1rem; }
+    .story-image { position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    .story-image img { width: 100%; display: block; }
+    .story-logo-overlay { position: absolute; top: 20px; right: 20px; width: 80px; height: 80px; background: rgba(255,255,255,0.9); border-radius: 50%; padding: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    
+    /* Timeline */
+    .timeline-section { background: #F7F8FA; padding: 100px 0; }
+    .timeline-wrap { max-width: 800px; margin: 0 auto; }
+    
+    /* Founder Slider */
+    .founder-gallery { display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 1rem; scroll-snap-type: x mandatory; }
+    .founder-gallery img { height: 250px; border-radius: 12px; scroll-snap-align: start; object-fit: cover; }
+    
+    /* Awards Grid */
+    .awards-section { padding: 100px 0; background: #fff; }
+    
+    @media (max-width: 768px) {
+      .story-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Sticky Top Bar -->
+  <div class="sticky-top-bar">
+    <a href="tel:+919952065544">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      99520 65544
+    </a>
+    <a href="https://wa.me/919952065544" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+    <a href="https://www.instagram.com/aaracomputers" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      Instagram
+    </a>
+    <a href="mailto:aaracomputers@gmail.com">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      aaracomputers@gmail.com
+    </a>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo-wrap">
+      <img loading="lazy" decoding="async" src="company logo.png" alt="AARA Computers Logo" />
+      <div class="logo-text">
+        <span class="logo-name">AARA Computers</span>
+        <span class="logo-tag">Est. 2012 · Vadapalani, Chennai</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="courses.html">Courses</a>
+      <a href="services.html">IT Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="tel:+919952065544" class="btn-nav-phone">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        99520 65544
+      </a>
+      <a href="contact.html" class="btn btn-primary" style="padding:10px 20px;font-size:0.85rem;">Enroll Now</a>
+    </div>
+    <div class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay" id="nav-overlay"></div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <div class="close-btn" id="nav-close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </div>
+    <img loading="lazy" decoding="async" src="company logo.png" alt="AARA Computers" style="height:44px;margin-bottom:1.5rem;" />
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="services.html">IT Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="margin-top:2rem;display:flex;flex-direction:column;gap:10px;">
+      <a href="tel:+919952065544" class="btn btn-outline" style="justify-content:center;">📞 Call Now</a>
+      <a href="https://wa.me/919952065544" class="btn btn-whatsapp" style="justify-content:center;">💬 WhatsApp</a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container reveal">
+      <h1>About AARA Computers</h1>
+      <p>Organizational Profile</p>
+    </div>
+  </header>
+
+  <!-- Company Story -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-content reveal-left">
+          <h2>Since 2012, a legacy of excellence</h2>
+          <p>Since 2012, Aara Computers has been a trusted academy and information technology organization providing quality education and technology solutions.</p>
+          <p>We are one of Chennai's leading sales and service providers of branded, new, and refurbished computers, laptops, desktops, servers, workstations, CCTV systems, and IT products.</p>
+          <p>Our mission is to provide affordable, practical, and career-focused education while delivering reliable IT services for businesses and individuals.</p>
+        </div>
+        <div class="story-image reveal-right">
+          <img loading="lazy" decoding="async" src="company poster.jpg" alt="AARA Computers Academy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="section-header center reveal">
+        <span class="section-label">Our Journey</span>
+        <h2 class="section-title">Milestones</h2>
+      </div>
+      <div class="timeline-wrap">
+        <div class="timeline">
+          <div class="timeline-item reveal" data-delay="0">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2012</div>
+            <h4>Foundation</h4>
+            <p>AARA Computers was established with a vision to provide quality IT education.</p>
+          </div>
+          <div class="timeline-item reveal" data-delay="100">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2014</div>
+            <h4>Microsoft Certification</h4>
+            <p>Achieved Microsoft Certified Trainer status, ensuring global standards in teaching.</p>
+          </div>
+          <div class="timeline-item reveal" data-delay="200">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2016</div>
+            <h4>1st Batch Graduates</h4>
+            <p>Successfully trained and placed our first major batch of students.</p>
+          </div>
+          <div class="timeline-item reveal" data-delay="300">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2018</div>
+            <h4>Best Teaching Award</h4>
+            <p>Recognised for outstanding contributions to IT education in Chennai.</p>
+          </div>
+          <div class="timeline-item reveal" data-delay="400">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2020</div>
+            <h4>IT Services Launch</h4>
+            <p>Expanded our offerings to include comprehensive IT services and sales.</p>
+          </div>
+          <div class="timeline-item reveal" data-delay="500">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2022</div>
+            <h4>500+ Students</h4>
+            <p>Crossed the milestone of training 500+ successful professionals.</p>
+          </div>
+          <div class="timeline-item reveal" data-delay="600">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2024</div>
+            <h4>1000+ Students</h4>
+            <p>Continuing our legacy of transforming careers through practical skills.</p>
+          </div>
+          <div class="timeline-item reveal" data-delay="700">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2026</div>
+            <h4>1500+ Students Trained</h4>
+            <p>A growing community of skilled professionals and satisfied IT service clients.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Spotlight -->
+  <section class="founder-section">
+    <div class="container">
+      <div class="founder-grid">
+        <!-- Left -->
+        <div class="founder-left reveal-left">
+          <span class="section-label">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Founder
+          </span>
+          <h2 class="section-title">Meet S. Mohideen Meeran</h2>
+          <p style="color: #60a5fa; font-weight: 600; margin-bottom: 1rem; font-size: 1.1rem;">Founder & Managing Director</p>
+          <p class="section-subtitle">
+            With over 12 years of dedicated teaching and technology expertise,
+            S. Mohideen Meeran has built AARA Computers into one of Chennai's most
+            trusted training academies — combining Microsoft-certified excellence with
+            a deep passion for student success.
+          </p>
+          <div class="founder-achievement-list">
+            <div class="founder-achievement-item">
+              <div class="founder-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Microsoft Certified Trainer (MCT)
+            </div>
+            <div class="founder-achievement-item">
+              <div class="founder-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Microsoft Certified Systems Engineer (MCSE)
+            </div>
+            <div class="founder-achievement-item">
+              <div class="founder-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+              1500+ Students Successfully Trained
+            </div>
+            <div class="founder-achievement-item">
+              <div class="founder-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+              Best Teaching Award Recipient
+            </div>
+            <div class="founder-achievement-item">
+              <div class="founder-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+              12+ Years of Industry Experience
+            </div>
+          </div>
+        </div>
+        <!-- Right – Floating Image -->
+        <div class="reveal-right" style="display:flex;flex-direction:column;align-items:center;">
+          <div class="founder-image-wrap">
+            <div class="founder-orbit founder-orbit-1"><div class="orbit-dot"></div></div>
+            <div class="founder-orbit founder-orbit-2"><div class="orbit-dot orbit-dot-2"></div></div>
+            <div class="founder-glow"></div>
+            <div class="founder-photo-frame">
+              <img loading="lazy" decoding="async" src="Founder Photo1.JPG" alt="S. Mohideen Meeran – Founder AARA Computers" />
+            </div>
+            <div class="founder-badge-float b1">🎓 MCT Certified</div>
+            <div class="founder-badge-float b2">🏆 1500+ Students</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Founder Gallery Slider -->
+      <div style="margin-top: 4rem;" class="reveal">
+          <h3 style="color: white; margin-bottom: 1.5rem; font-family: 'Outfit', sans-serif;">Founder in Action</h3>
+          <div class="founder-gallery">
+              <img loading="lazy" decoding="async" src="founder photo2.JPG" alt="Founder Teaching" />
+              <img loading="lazy" decoding="async" src="founder photo3.JPG" alt="Founder Session" />
+              <img loading="lazy" decoding="async" src="founder photo 4.JPG" alt="Founder Profile" />
+              <img loading="lazy" decoding="async" src="Founder photo with some vip.JPG" alt="Founder with VIP" />
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards Section -->
+  <section class="awards-section">
+    <div class="container">
+      <div class="section-header center reveal">
+        <span class="section-label">Excellence</span>
+        <h2 class="section-title">Awards & Recognition</h2>
+      </div>
+      <div class="grid-3">
+         <div class="award-card reveal" data-delay="0">
+          <div class="img-hover">
+            <img loading="lazy" decoding="async" class="award-img" src="founder getting best teacher award.JPG" alt="Best Teaching Award" style="height:240px;object-fit:cover;width:100%;" />
+          </div>
+          <div class="award-body">
+            <div style="display:inline-block;background:#FFF7ED;color:#D97706;font-size:0.75rem;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:.75rem;">🏆 AWARD</div>
+            <h3>Best Teaching Award</h3>
+            <p>Recognised for outstanding contributions to computer education and student development in Chennai.</p>
+          </div>
+        </div>
+        <div class="award-card reveal" data-delay="150">
+          <div style="height:240px;background:linear-gradient(135deg,#EAF3FF,#dbeafe);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;padding:2rem;">
+            <div style="width:80px;height:80px;background:#0F6FFF;border-radius:20px;display:flex;align-items:center;justify-content:center;">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <span style="font-family:'Outfit',sans-serif;font-weight:800;font-size:1.1rem;color:#0B1B35;text-align:center;">Microsoft Certified Trainer</span>
+          </div>
+          <div class="award-body">
+            <div style="display:inline-block;background:#EAF3FF;color:#0F6FFF;font-size:0.75rem;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:.75rem;">⭐ CERTIFICATION</div>
+            <h3>Microsoft Certified Trainer</h3>
+            <p>S. Mohideen Meeran holds the prestigious MCT certification — the highest standard for IT educators.</p>
+          </div>
+        </div>
+         <div class="award-card reveal" data-delay="150">
+          <div style="height:240px;background:linear-gradient(135deg,#EAF3FF,#dbeafe);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;padding:2rem;">
+            <div style="width:80px;height:80px;background:#0F6FFF;border-radius:20px;display:flex;align-items:center;justify-content:center;">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span style="font-family:'Outfit',sans-serif;font-weight:800;font-size:1.1rem;color:#0B1B35;text-align:center;">MCSE Certified</span>
+          </div>
+          <div class="award-body">
+            <div style="display:inline-block;background:#EAF3FF;color:#0F6FFF;font-size:0.75rem;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:.75rem;">⭐ CERTIFICATION</div>
+            <h3>Microsoft Certified Systems Engineer</h3>
+            <p>Proven expertise in designing and implementing Microsoft infrastructure solutions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-header center reveal">
+        <span class="section-label">Why AARA</span>
+        <h2 class="section-title">Why Choose AARA Computers?</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card reveal" data-delay="0">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h4>12+ Years Experience</h4>
+          <p>Trusted institution since 2012</p>
+        </div>
+        <div class="feature-card reveal" data-delay="100">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <h4>Microsoft Certified</h4>
+          <p>MCT &amp; MCSE qualified faculty</p>
+        </div>
+        <div class="feature-card reveal" data-delay="200">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <h4>Practical Training</h4>
+          <p>Hands-on learning, real projects</p>
+        </div>
+        <div class="feature-card reveal" data-delay="300">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+          <h4>Affordable Fees</h4>
+          <p>Quality education, pocket-friendly</p>
+        </div>
+        <div class="feature-card reveal" data-delay="400">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+          <h4>Industry Exposure</h4>
+          <p>Real-world skills and projects</p>
+        </div>
+        <div class="feature-card reveal" data-delay="0">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg></div>
+          <h4>Placement Guidance</h4>
+          <p>Career support for all students</p>
+        </div>
+        <div class="feature-card reveal" data-delay="100">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <h4>Certificate Courses</h4>
+          <p>Industry recognised certificates</p>
+        </div>
+        <div class="feature-card reveal" data-delay="200">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <h4>Service Support</h4>
+          <p>IT services &amp; after-training help</p>
+        </div>
+        <div class="feature-card reveal" data-delay="300">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <h4>Individual Attention</h4>
+          <p>Small batches, personalised care</p>
+        </div>
+        <div class="feature-card reveal" data-delay="400">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <h4>Expert Faculty</h4>
+          <p>Experienced, certified instructors</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="section section-blue" style="text-align: center;">
+      <div class="container reveal">
+          <h2 style="font-family: 'Outfit', sans-serif; font-size: 2.5rem; color: #0B1B35; margin-bottom: 1rem;">Ready to get started?</h2>
+          <p style="color: #6B7280; margin-bottom: 2rem;">Contact us today to learn more about our courses and services.</p>
+          <a href="contact.html" class="btn btn-primary">Contact Us</a>
+      </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img loading="lazy" decoding="async" src="company logo.png" alt="AARA Computers" />
+          <p>Premier computer training academy and IT services company in Vadapalani, Chennai. Building careers and powering businesses since 2012.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/aaracomputers" target="_blank" title="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://wa.me/919952065544" target="_blank" title="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="tel:+919952065544" title="Call Us">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="courses.html">Our Courses</a></li>
+            <li><a href="services.html">IT Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Popular Courses</h4>
+          <ul>
+            <li><a href="courses.html">Office Automation (CCA)</a></li>
+            <li><a href="courses.html">Tally Prime with GST</a></li>
+            <li><a href="courses.html">Digital Marketing</a></li>
+            <li><a href="courses.html">Web Development</a></li>
+            <li><a href="courses.html">Python Programming</a></li>
+            <li><a href="courses.html">CCTV Installation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>No.34/108, Gangai Amman Koil Street, Vadapalani, Chennai – 600026</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <span><a href="tel:+919952065544" style="color:inherit;">99520 65544</a> / <a href="tel:+919445435755" style="color:inherit;">94454 35755</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:aaracomputers@gmail.com" style="color:inherit;">aaracomputers@gmail.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Mon–Sat: 9:00 AM – 9:00 PM<br/>Sunday: Closed</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 AARA Computers. All rights reserved. | Vadapalani, Chennai</span>
+        <span>Microsoft Certified Trainer &amp; Systems Engineer</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating FAB -->
+  <div class="fab-container">
+    <a href="https://wa.me/919952065544" class="fab-btn whatsapp" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+    <a href="tel:+919952065544" class="fab-btn call">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call Now
+    </a>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
